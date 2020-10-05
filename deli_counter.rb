@@ -28,8 +28,15 @@ end
 def now_serving(array)
   if array.length == 0
     puts "There is nobody waiting to be served!"
+<<<<<<< HEAD
 else 
   puts "Currently serving #{array.take(1).join}."
   array = array.shift
+=======
+else array.length >= 1
+  # why is this not working
+  puts "Currently serving " + array.take(1).join + "."
+  array = array.drop(1)
+>>>>>>> 3a35b1406c1f502e3a7b3550f1beef0dc119e589
 end
 end
